@@ -1,7 +1,7 @@
 (kicad_pcb
-	(version 20240108)
+	(version 20241229)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(general
 		(thickness 1.6)
 		(legacy_teardrops no)
@@ -9,41 +9,81 @@
 	(paper "A4")
 	(layers
 		(0 "F.Cu" signal)
-		(31 "B.Cu" signal)
-		(32 "B.Adhes" user "B.Adhesive")
-		(33 "F.Adhes" user "F.Adhesive")
-		(34 "B.Paste" user)
-		(35 "F.Paste" user)
-		(36 "B.SilkS" user "B.Silkscreen")
-		(37 "F.SilkS" user "F.Silkscreen")
-		(38 "B.Mask" user)
-		(39 "F.Mask" user)
-		(40 "Dwgs.User" user "User.Drawings")
-		(41 "Cmts.User" user "User.Comments")
-		(42 "Eco1.User" user "User.Eco1")
-		(43 "Eco2.User" user "User.Eco2")
-		(44 "Edge.Cuts" user)
-		(45 "Margin" user)
-		(46 "B.CrtYd" user "B.Courtyard")
-		(47 "F.CrtYd" user "F.Courtyard")
-		(48 "B.Fab" user)
-		(49 "F.Fab" user)
-		(50 "User.1" user)
-		(51 "User.2" user)
-		(52 "User.3" user)
-		(53 "User.4" user)
-		(54 "User.5" user)
-		(55 "User.6" user)
-		(56 "User.7" user)
-		(57 "User.8" user)
-		(58 "User.9" user)
+		(2 "B.Cu" signal)
+		(9 "F.Adhes" user "F.Adhesive")
+		(11 "B.Adhes" user "B.Adhesive")
+		(13 "F.Paste" user)
+		(15 "B.Paste" user)
+		(5 "F.SilkS" user "F.Silkscreen")
+		(7 "B.SilkS" user "B.Silkscreen")
+		(1 "F.Mask" user)
+		(3 "B.Mask" user)
+		(17 "Dwgs.User" user "User.Drawings")
+		(19 "Cmts.User" user "User.Comments")
+		(21 "Eco1.User" user "User.Eco1")
+		(23 "Eco2.User" user "User.Eco2")
+		(25 "Edge.Cuts" user)
+		(27 "Margin" user)
+		(31 "F.CrtYd" user "F.Courtyard")
+		(29 "B.CrtYd" user "B.Courtyard")
+		(35 "F.Fab" user)
+		(33 "B.Fab" user)
+		(39 "User.1" user)
+		(41 "User.2" user)
+		(43 "User.3" user)
+		(45 "User.4" user)
+		(47 "User.5" user)
+		(49 "User.6" user)
+		(51 "User.7" user)
+		(53 "User.8" user)
+		(55 "User.9" user)
 	)
 	(setup
+		(stackup
+			(layer "F.SilkS"
+				(type "Top Silk Screen")
+			)
+			(layer "F.Paste"
+				(type "Top Solder Paste")
+			)
+			(layer "F.Mask"
+				(type "Top Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "F.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "dielectric 1"
+				(type "core")
+				(thickness 1.51)
+				(material "FR4")
+				(epsilon_r 4.5)
+				(loss_tangent 0.02)
+			)
+			(layer "B.Cu"
+				(type "copper")
+				(thickness 0.035)
+			)
+			(layer "B.Mask"
+				(type "Bottom Solder Mask")
+				(thickness 0.01)
+			)
+			(layer "B.Paste"
+				(type "Bottom Solder Paste")
+			)
+			(layer "B.SilkS"
+				(type "Bottom Silk Screen")
+			)
+			(copper_finish "None")
+			(dielectric_constraints no)
+		)
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
+		(tenting front back)
 		(pcbplotparams
-			(layerselection 0x00010fc_ffffffff)
-			(plot_on_all_layers_selection 0x0000000_00000000)
+			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
 			(usegerberattributes yes)
@@ -53,7 +93,6 @@
 			(dashed_line_gap_ratio 3.000000)
 			(svgprecision 4)
 			(plotframeref no)
-			(viasonmask no)
 			(mode 1)
 			(useauxorigin no)
 			(hpglpennumber 1)
@@ -61,16 +100,20 @@
 			(hpglpendiameter 15.000000)
 			(pdf_front_fp_property_popups yes)
 			(pdf_back_fp_property_popups yes)
+			(pdf_metadata yes)
+			(pdf_single_document no)
 			(dxfpolygonmode yes)
 			(dxfimperialunits yes)
 			(dxfusepcbnewfont yes)
 			(psnegative no)
 			(psa4output no)
-			(plotreference yes)
-			(plotvalue yes)
-			(plotfptext yes)
+			(plot_black_and_white yes)
 			(plotinvisibletext no)
 			(sketchpadsonfab no)
+			(plotpadnumbers no)
+			(hidednponfab no)
+			(sketchdnponfab yes)
+			(crossoutdnponfab yes)
 			(subtractmaskfromsilk no)
 			(outputformat 1)
 			(mirror no)
@@ -92,7 +135,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "0388e894-abef-481b-aa0e-5bd52ea23a9f")
-		(at 155.1 66.5)
+		(at 158.04 63.79)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW13"
@@ -113,19 +156,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e44a66ce-a119-4bb6-a118-8b722f3d927e")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -157,7 +187,7 @@
 			)
 		)
 		(path "/c09526fc-64b6-488e-a726-f2192dfa3933")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -377,7 +407,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "e9f4f22f-651c-4d5e-a61e-c2295d7c3166")
 		)
@@ -436,6 +466,7 @@
 			(pintype "passive")
 			(uuid "3fe22ec4-70b0-4067-8b59-f0e8f422c60e")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -451,13 +482,13 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "0442450a-ae80-4b21-b20c-8bd5e1ce43b3")
-		(at 132.05 92.05)
+		(at 132.03 97.1)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW8"
 			(at 3.25 -2 0)
 			(layer "F.SilkS")
-			(uuid "3ab6bb13-fab2-4ad4-841f-572f39d95413")
+			(uuid "0854d382-7e98-4bea-bac8-5b11a021a850")
 			(effects
 				(font
 					(size 1 1)
@@ -468,23 +499,10 @@
 		(property "Value" "SW_Push"
 			(at 3.75 6.7 0)
 			(layer "F.Fab")
-			(uuid "46479592-6e42-4e67-940a-a1be0ba5acd0")
+			(uuid "77e4ae6c-054a-46f6-9420-4e511f87112d")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "13f408fd-0ee0-4089-af1b-007ed31d2582")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -494,7 +512,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c9f0135a-e8f4-43a2-8f98-76b5e30a2e1b")
+			(uuid "6513b4c1-378c-4f7e-8d3e-86f183cbe6fc")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -507,7 +525,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "294a78bd-acf0-407e-89d9-4b2866686342")
+			(uuid "2eab80a7-e4de-4487-8312-f2fd070aa61a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -516,7 +534,7 @@
 			)
 		)
 		(path "/f1cf879e-f288-4cf6-a7cb-fb64a615ffb4")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -736,7 +754,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "3b6d5ca4-7d4a-455b-b620-f41efee30217")
 		)
@@ -795,6 +813,7 @@
 			(pintype "passive")
 			(uuid "bc322712-37fd-42aa-8b47-0d8db60163f0")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -810,7 +829,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "0faeb204-f0b9-42a9-9f8e-16ac7c278d04")
-		(at 155.1 83.6)
+		(at 158.04 86.65)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW15"
@@ -831,19 +850,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0d7105f3-f104-4ff5-b4e3-91af0b4a9adc")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -875,7 +881,7 @@
 			)
 		)
 		(path "/6f2bc8e7-c477-41ab-81b7-ee336bc1efe6")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1095,7 +1101,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "4b2d327f-658c-4509-a6b7-4dedf2cddf70")
 		)
@@ -1154,6 +1160,7 @@
 			(pintype "passive")
 			(uuid "2216e7ca-4ea7-4931-97d7-ee90bb5eefbf")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -1169,13 +1176,13 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "13b1e711-b044-4964-afd2-f62b07ec4d98")
-		(at 119.4 66.45)
+		(at 119.4 63.79)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW1"
 			(at 3.25 -2 0)
 			(layer "F.SilkS")
-			(uuid "473fba05-de3f-48ab-964d-82b257f17d74")
+			(uuid "4c74bac5-9c2c-4c96-a5ea-448bfb3f3c3b")
 			(effects
 				(font
 					(size 1 1)
@@ -1186,23 +1193,10 @@
 		(property "Value" "SW_Push"
 			(at 3.75 6.7 0)
 			(layer "F.Fab")
-			(uuid "d789bdf1-8ea3-48b5-87d1-56099049db32")
+			(uuid "77f03c8c-f860-44bb-8ab5-683e33cddbb9")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "db602653-32da-4cb4-a351-5f1f00baf2ef")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -1212,7 +1206,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "5233578c-baa8-427d-975e-76a45b8e1969")
+			(uuid "0359e289-b39e-4dcc-b178-43ba65c28f3d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1225,7 +1219,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "901b161a-9b42-4c83-884e-d50121982a07")
+			(uuid "7bae1cd1-10a6-422a-815b-0a100766b565")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1234,7 +1228,7 @@
 			)
 		)
 		(path "/37dd481a-8744-4d3e-ab2c-6732d44d1aa4")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1454,7 +1448,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "e314e4c4-cee7-486f-84c2-0ad131ee8614")
 		)
@@ -1513,6 +1507,7 @@
 			(pintype "passive")
 			(uuid "42255c4f-f078-42b9-8f1f-bbf0a68b7c67")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -1528,7 +1523,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "2139f9a5-4af9-4ebc-848e-4d0a1fb15c5b")
-		(at 155.1 92.15)
+		(at 158.02 97.1)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW16"
@@ -1549,19 +1544,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1cc552bd-28c4-419a-85dc-51cec9943081")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -1593,7 +1575,7 @@
 			)
 		)
 		(path "/6b4e8521-9773-4aa2-8767-76e0dc4882bc")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -1813,7 +1795,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "9b407d7f-4fd8-48f6-ba26-8379f0059f90")
 		)
@@ -1872,6 +1854,7 @@
 			(pintype "passive")
 			(uuid "bc55da92-9a6f-4089-aa0c-3058b97834e5")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -1887,13 +1870,13 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "27813e85-a0a9-4d09-bf0e-83945e12c1a5")
-		(at 119.4 92.1)
+		(at 119.38 97.1)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW4"
 			(at 3.25 -2 0)
 			(layer "F.SilkS")
-			(uuid "e4958250-3f8c-4883-9102-cfcfbb0bf809")
+			(uuid "d35f5eaa-a7cf-4519-a50c-507aa9f7b221")
 			(effects
 				(font
 					(size 1 1)
@@ -1904,23 +1887,10 @@
 		(property "Value" "SW_Push"
 			(at 3.75 6.7 0)
 			(layer "F.Fab")
-			(uuid "8833e54c-a2b6-4e03-8d75-18eddfb2353f")
+			(uuid "bab3aa36-4837-46f7-a1cb-9b14e75a4183")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "1cee919b-0958-4482-8a2c-a081c4e1f083")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -1930,7 +1900,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d5c9198a-8183-478e-b2f0-42a2c6450a0c")
+			(uuid "b215077b-fb7f-48ee-900c-6c331ec5dcc5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1943,7 +1913,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7a6daa26-94ab-4176-8a7c-9a59d9d3bf28")
+			(uuid "fc9a14a6-bc37-4f98-8735-626c5e805588")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1952,7 +1922,7 @@
 			)
 		)
 		(path "/35d5eae3-1ca6-466a-906f-8564a7688950")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2172,7 +2142,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "079791ac-11a1-4924-887b-de5db740bfcb")
 		)
@@ -2231,6 +2201,7 @@
 			(pintype "passive")
 			(uuid "d8f018b4-399b-4c2c-8ed7-087b3152145a")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -2271,19 +2242,6 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "a1320901-552c-4443-bc21-4015a59ab6bd")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
@@ -2311,7 +2269,7 @@
 			)
 		)
 		(path "/0da54e5f-65d7-40cf-b45e-ec06597f1d79")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2531,7 +2489,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "df167f70-785a-4964-9e05-0084a47e17aa")
 		)
@@ -2590,6 +2548,7 @@
 			(pintype "passive")
 			(uuid "81ffdf5f-b7d8-4a79-a2a3-0d6ed290e1e9")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -2605,7 +2564,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "41c58207-a984-4f4d-a632-f088465c8a91")
-		(at 165.65 75.05)
+		(at 171.375 75.22)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW18"
@@ -2626,19 +2585,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "ffc48853-33e6-4cd8-adb0-8dbe9974bda6")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -2670,7 +2616,7 @@
 			)
 		)
 		(path "/9cb24306-d6e8-446e-b695-bbbdf6216572")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -2890,7 +2836,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "4e3dc51b-84ed-4499-b960-503a4139d846")
 		)
@@ -2949,6 +2895,7 @@
 			(pintype "passive")
 			(uuid "86db8c21-0ed1-4e0c-a19e-b0db72227a05")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -2964,7 +2911,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "443ec6f8-7cf7-4ecb-8ccf-df3a76e4009e")
-		(at 155.1 75.05)
+		(at 158.04 75.05)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW14"
@@ -2985,19 +2932,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6d454235-c7ae-446e-94f5-a55374a837f8")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -3029,7 +2963,7 @@
 			)
 		)
 		(path "/2b8301bd-705b-4117-9b43-6dddb133ef79")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -3249,7 +3183,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "56a8fcf1-c13b-4686-b0d0-e1ce87beda9e")
 		)
@@ -3308,7 +3242,285 @@
 			(pintype "passive")
 			(uuid "3896077f-9eb2-4d99-b840-0a704ae74347")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical"
+		(layer "F.Cu")
+		(uuid "4809a10d-212f-4df7-bc57-b0b64794be10")
+		(at 185.445 75.575)
+		(descr "Through hole straight socket strip, 1x04, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
+		(tags "Through hole socket strip THT 1x04 2.54mm single row")
+		(property "Reference" "J2"
+			(at 0 -2.77 0)
+			(layer "F.SilkS")
+			(uuid "99e775a4-d37c-4510-a075-6f4413b9b0e4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04_Pin"
+			(at 0 10.39 0)
+			(layer "F.Fab")
+			(uuid "a60382f9-962a-4980-b427-659fff537ac7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fcafe627-f6e2-4d11-a5cb-81512d21f542")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f94bde23-851b-49c0-9dad-c7a2c1334251")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/51d31158-fd32-43b6-9e58-fd60bcdab910")
+		(sheetname "/")
+		(sheetfile "Single Key.kicad_sch")
+		(attr through_hole)
+		(fp_line
+			(start -1.33 1.27)
+			(end -1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e6633486-f178-4cce-b020-27881e86ed7f")
+		)
+		(fp_line
+			(start -1.33 1.27)
+			(end 1.33 1.27)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "7c55cfbe-44e0-40d6-8af5-55e71871b16c")
+		)
+		(fp_line
+			(start -1.33 8.95)
+			(end 1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "71060640-d56b-42f6-bbf0-1781a070af24")
+		)
+		(fp_line
+			(start 0 -1.33)
+			(end 1.33 -1.33)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0c9a3b05-c666-4773-82cf-929bbd640853")
+		)
+		(fp_line
+			(start 1.33 -1.33)
+			(end 1.33 0)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "56445c52-c25d-4a06-8d90-a0987f56d198")
+		)
+		(fp_line
+			(start 1.33 1.27)
+			(end 1.33 8.95)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3c70d57b-51fc-4cca-b04e-649901bf0889")
+		)
+		(fp_line
+			(start -1.8 -1.8)
+			(end 1.75 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "16dd5bdd-8dc0-49c5-ad0a-505199e3683d")
+		)
+		(fp_line
+			(start -1.8 9.4)
+			(end -1.8 -1.8)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5418bedc-f883-4311-abb1-182dbbb07349")
+		)
+		(fp_line
+			(start 1.75 -1.8)
+			(end 1.75 9.4)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "3922e019-0049-4f91-b84f-e32f88a68a00")
+		)
+		(fp_line
+			(start 1.75 9.4)
+			(end -1.8 9.4)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "76a882bb-0654-4dd1-88fa-ff9193b76baa")
+		)
+		(fp_line
+			(start -1.27 -1.27)
+			(end 0.635 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "32a3753b-1b47-4749-823f-497fa68ad699")
+		)
+		(fp_line
+			(start -1.27 8.89)
+			(end -1.27 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9f0f2e61-de7f-4f28-94c7-74643fb58c2f")
+		)
+		(fp_line
+			(start 0.635 -1.27)
+			(end 1.27 -0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "357fed7a-0b31-4786-ad5b-18639f10ca9d")
+		)
+		(fp_line
+			(start 1.27 -0.635)
+			(end 1.27 8.89)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a6fcd684-700d-44fb-8594-3d78796fb017")
+		)
+		(fp_line
+			(start 1.27 8.89)
+			(end -1.27 8.89)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9de568b1-5231-4079-aaed-f6f7362293f5")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 3.81 90)
+			(layer "F.Fab")
+			(uuid "16ad2e16-7aeb-4137-b2d2-c49998408f3d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 6 "Col1")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "e22bb1cf-ea18-40a7-9c69-7a4d8e1f05ce")
+		)
+		(pad "2" thru_hole oval
+			(at 0 2.54)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 7 "Col2")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "53f3b24c-2a9f-470f-b78d-306f0c8cfc5d")
+		)
+		(pad "3" thru_hole oval
+			(at 0 5.08)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 8 "Col3")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "109783e7-3571-4dca-900e-8e0a3bd7ebd0")
+		)
+		(pad "4" thru_hole oval
+			(at 0 7.62)
+			(size 1.7 1.7)
+			(drill 1)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net 9 "Col4")
+			(pinfunction "Pin_4")
+			(pintype "passive")
+			(uuid "8c3b2cc5-3aa9-429e-8d3c-3b28fe4b0b9e")
+		)
+		(embedded_fonts no)
+		(model "${KICAD9_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -3323,7 +3535,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "4f5f3051-bcf6-40ae-bb40-cc7e7473c4d3")
-		(at 144.55 66.5)
+		(at 144.705 63.79)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW9"
@@ -3344,19 +3556,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0cc8ab34-312a-44f9-ae2e-76ec3f0e0f31")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -3388,7 +3587,7 @@
 			)
 		)
 		(path "/25efd004-745e-43be-83e9-9548ce61e89e")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -3608,7 +3807,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "f5636702-e184-4df7-900e-f3182cf678ce")
 		)
@@ -3667,6 +3866,7 @@
 			(pintype "passive")
 			(uuid "e9de0ea4-77e0-43dc-83f9-febb7b70faf7")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -3682,13 +3882,13 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "6819e186-e096-44b6-87d5-7d41356cbca1")
-		(at 119.4 83.55)
+		(at 119.4 86.65)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW3"
 			(at 3.25 -2 0)
 			(layer "F.SilkS")
-			(uuid "16c045e0-1d65-40b3-818d-d73eb5cd2d69")
+			(uuid "43232ff1-4240-464e-a6ee-75ae25e3ae7f")
 			(effects
 				(font
 					(size 1 1)
@@ -3699,23 +3899,10 @@
 		(property "Value" "SW_Push"
 			(at 3.75 6.7 0)
 			(layer "F.Fab")
-			(uuid "1d0bf7b9-efb0-4dea-9a05-6ded185d03d7")
+			(uuid "d280fac8-e536-46b6-82c5-9c23d8e27e7d")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b7c15d0d-c784-452c-b92c-c46e006c4555")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -3725,7 +3912,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "40dfbe64-0db4-4990-82b9-7029348cc8dd")
+			(uuid "71f3465f-cb0b-4f45-b6b0-8ed34cf5ca37")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3738,7 +3925,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4202d440-3cae-4d34-bd58-a68d43c2130a")
+			(uuid "313c4884-d270-4f3d-81d2-d43e85da8237")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3747,7 +3934,7 @@
 			)
 		)
 		(path "/6faaa1d3-dab0-43cb-8d31-cad7d86cde3f")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -3967,7 +4154,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "111e5b11-0bdd-453b-b96a-d3d5b7f38cdf")
 		)
@@ -4026,6 +4213,7 @@
 			(pintype "passive")
 			(uuid "e2c779c0-27c2-441f-b285-561b0c78535f")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -4041,7 +4229,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "778d4110-08a6-4e2d-8d8c-c27dae7926c3")
-		(at 144.55 83.6)
+		(at 144.705 86.65)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW11"
@@ -4062,19 +4250,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "5e6c7890-077b-42fa-890f-dc4ebc804ba5")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -4106,7 +4281,7 @@
 			)
 		)
 		(path "/ab367f29-2d9d-4112-81c4-b27f5cde5856")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -4326,7 +4501,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "e2f47493-8218-498b-b7ec-66a32c5890e1")
 		)
@@ -4385,6 +4560,7 @@
 			(pintype "passive")
 			(uuid "c4e69c6c-a63f-4747-862f-bea14200c14e")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -4400,11 +4576,11 @@
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "7a9da502-20e0-4dbe-b1d4-4452d10e1179")
-		(at 97.2 74.16)
+		(at 149.225 108.585 90)
 		(descr "Through hole straight pin header, 1x05, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x05 2.54mm single row")
 		(property "Reference" "J1"
-			(at 0 -2.33 0)
+			(at 0 -2.33 90)
 			(layer "F.SilkS")
 			(uuid "15ddfe36-b295-4058-b976-a1d3e51689c0")
 			(effects
@@ -4415,7 +4591,7 @@
 			)
 		)
 		(property "Value" "Conn_01x05_Pin"
-			(at 0 12.49 0)
+			(at 0 12.49 90)
 			(layer "F.Fab")
 			(uuid "3b52276a-bca3-4e4d-bfc4-f1df13a654ea")
 			(effects
@@ -4425,21 +4601,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "81fa6f24-a5df-4a4d-9529-bb9b3b310290")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -4452,7 +4615,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x05, script generated"
-			(at 0 0 0)
+			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -4466,7 +4629,7 @@
 		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/0eb4470e-8ea6-4d0f-8f7e-eb3904de1174")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -4490,14 +4653,14 @@
 			(uuid "c46c0ad3-7442-4966-b17c-dab934a6d4d8")
 		)
 		(fp_line
-			(start -1.33 1.27)
-			(end -1.33 11.49)
+			(start 1.33 1.27)
+			(end 1.33 11.49)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e709c089-97c1-48a5-b4fb-1597bc7a5b2c")
+			(uuid "2c7a61cc-ee94-4755-bc71-1aab9ea0d3c8")
 		)
 		(fp_line
 			(start -1.33 1.27)
@@ -4510,6 +4673,16 @@
 			(uuid "5f608b76-0507-41fe-8930-07b8e84a1745")
 		)
 		(fp_line
+			(start -1.33 1.27)
+			(end -1.33 11.49)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e709c089-97c1-48a5-b4fb-1597bc7a5b2c")
+		)
+		(fp_line
 			(start -1.33 11.49)
 			(end 1.33 11.49)
 			(stroke
@@ -4518,36 +4691,6 @@
 			)
 			(layer "F.SilkS")
 			(uuid "f50ef1c7-5b1b-4f54-83a1-0b73f5d7371f")
-		)
-		(fp_line
-			(start 1.33 1.27)
-			(end 1.33 11.49)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "2c7a61cc-ee94-4755-bc71-1aab9ea0d3c8")
-		)
-		(fp_line
-			(start -1.8 -1.8)
-			(end -1.8 11.95)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "5a78e047-be2c-4fa1-a602-83bf8f6612dc")
-		)
-		(fp_line
-			(start -1.8 11.95)
-			(end 1.8 11.95)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "86bc97df-68ea-4b5a-97c8-609e2c5d997f")
 		)
 		(fp_line
 			(start 1.8 -1.8)
@@ -4560,6 +4703,16 @@
 			(uuid "7873481f-b79b-46bf-a1cb-25cceaa9dcdf")
 		)
 		(fp_line
+			(start -1.8 -1.8)
+			(end -1.8 11.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "5a78e047-be2c-4fa1-a602-83bf8f6612dc")
+		)
+		(fp_line
 			(start 1.8 11.95)
 			(end 1.8 -1.8)
 			(stroke
@@ -4570,34 +4723,14 @@
 			(uuid "d4475b2c-cc9b-42ab-9a8d-75458ad96d5b")
 		)
 		(fp_line
-			(start -1.27 -0.635)
-			(end -0.635 -1.27)
+			(start -1.8 11.95)
+			(end 1.8 11.95)
 			(stroke
-				(width 0.1)
+				(width 0.05)
 				(type solid)
 			)
-			(layer "F.Fab")
-			(uuid "a03a054f-fef5-4267-ac6a-8a2e48626162")
-		)
-		(fp_line
-			(start -1.27 11.43)
-			(end -1.27 -0.635)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "e92c8668-ac45-4eba-8301-6c4daf03e24e")
-		)
-		(fp_line
-			(start -0.635 -1.27)
-			(end 1.27 -1.27)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "e3ac82be-6b8f-4ee8-9a5c-12a30978feb0")
+			(layer "F.CrtYd")
+			(uuid "86bc97df-68ea-4b5a-97c8-609e2c5d997f")
 		)
 		(fp_line
 			(start 1.27 -1.27)
@@ -4610,6 +4743,26 @@
 			(uuid "c056c45c-7b56-4e68-8c98-b3209e556b01")
 		)
 		(fp_line
+			(start -0.635 -1.27)
+			(end 1.27 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e3ac82be-6b8f-4ee8-9a5c-12a30978feb0")
+		)
+		(fp_line
+			(start -1.27 -0.635)
+			(end -0.635 -1.27)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a03a054f-fef5-4267-ac6a-8a2e48626162")
+		)
+		(fp_line
 			(start 1.27 11.43)
 			(end -1.27 11.43)
 			(stroke
@@ -4619,8 +4772,18 @@
 			(layer "F.Fab")
 			(uuid "295cca1e-80d1-4145-aabf-24f002e63fb7")
 		)
+		(fp_line
+			(start -1.27 11.43)
+			(end -1.27 -0.635)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e92c8668-ac45-4eba-8301-6c4daf03e24e")
+		)
 		(fp_text user "${REFERENCE}"
-			(at 0 5.08 90)
+			(at 0 5.08 0)
 			(layer "F.Fab")
 			(uuid "a7f9134c-0aef-4fae-a6b8-aed2a9180a02")
 			(effects
@@ -4631,7 +4794,7 @@
 			)
 		)
 		(pad "1" thru_hole rect
-			(at 0 0)
+			(at 0 0 90)
 			(size 1.7 1.7)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -4642,7 +4805,7 @@
 			(uuid "23431080-3491-4a8a-adb5-5cd211e2ca3a")
 		)
 		(pad "2" thru_hole oval
-			(at 0 2.54)
+			(at 0 2.54 90)
 			(size 1.7 1.7)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -4653,7 +4816,7 @@
 			(uuid "c17bca7f-586e-469f-a9ba-92489873c38a")
 		)
 		(pad "3" thru_hole oval
-			(at 0 5.08)
+			(at 0 5.08 90)
 			(size 1.7 1.7)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -4664,7 +4827,7 @@
 			(uuid "bce5251c-4695-410b-9c5a-2b6f1387b5a4")
 		)
 		(pad "4" thru_hole oval
-			(at 0 7.62)
+			(at 0 7.62 90)
 			(size 1.7 1.7)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -4675,7 +4838,7 @@
 			(uuid "7becad2c-9628-46c3-9f05-b1b337f79d79")
 		)
 		(pad "5" thru_hole oval
-			(at 0 10.16)
+			(at 0 10.16 90)
 			(size 1.7 1.7)
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
@@ -4685,6 +4848,7 @@
 			(pintype "passive")
 			(uuid "0e90ca1c-07bf-43de-8dba-c1ac0b75ed7e")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x05_P2.54mm_Vertical.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -4706,7 +4870,7 @@
 		(property "Reference" "SW2"
 			(at 3.25 -2 0)
 			(layer "F.SilkS")
-			(uuid "f57d70db-1d6d-405c-89e9-791bbdb29a26")
+			(uuid "bf52762a-4e28-419e-8834-310984243d5c")
 			(effects
 				(font
 					(size 1 1)
@@ -4717,23 +4881,10 @@
 		(property "Value" "SW_Push"
 			(at 3.75 6.7 0)
 			(layer "F.Fab")
-			(uuid "995a032d-cfa6-4c2a-8a74-fd332373e35e")
+			(uuid "cbfae2f0-1a7d-4b7c-9fb3-6378fddf3786")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e9f9740a-5ada-4a22-8e3a-f733bb90b698")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -4743,7 +4894,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "be89c498-b92f-4611-9d5e-b26681d063f4")
+			(uuid "df693356-1b52-4666-b164-ee32f7d7a109")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4756,7 +4907,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7666ff60-5fe9-43f8-9834-c34476207ac5")
+			(uuid "0169ecb3-9947-42b3-a555-111a0ffdc4ff")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4765,7 +4916,7 @@
 			)
 		)
 		(path "/9577cbeb-e78b-449c-ba23-dc73424e37bf")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -4985,7 +5136,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "e88e1bd9-0ad6-4298-af1c-3e6a65201046")
 		)
@@ -5044,6 +5195,7 @@
 			(pintype "passive")
 			(uuid "2c427c6f-e9a4-4fcb-aac6-e47d8bbca785")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -5084,19 +5236,6 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "13733ba9-0ae7-4cff-a719-69c83840f3a5")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "Datasheet" ""
 			(at 0 0 0)
 			(unlocked yes)
@@ -5124,7 +5263,7 @@
 			)
 		)
 		(path "/6d595af9-3192-4d22-9f25-965ea3b9d44a")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5344,7 +5483,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "fc55dcc8-90d2-4213-9a32-7987c489dfe7")
 		)
@@ -5403,6 +5542,7 @@
 			(pintype "passive")
 			(uuid "79d02b23-17ad-4976-873a-8b771235292a")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -5418,7 +5558,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "b15e99d6-f6de-4c47-a117-778acb491f6c")
-		(at 165.65 92.15)
+		(at 171.355 97.1)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW20"
@@ -5439,19 +5579,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "72e9b34e-27f6-4ff5-8c2a-38b77c91fabc")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -5483,7 +5610,7 @@
 			)
 		)
 		(path "/29bb4821-56ad-4024-9a93-9a92ef1762d2")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -5703,7 +5830,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "6a5047c0-218a-483a-9633-5e6c2cf98812")
 		)
@@ -5762,6 +5889,7 @@
 			(pintype "passive")
 			(uuid "346bf601-c16e-449f-86c1-3b1f6f6a6b25")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -5777,7 +5905,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "b99f3f1f-4320-46c7-9b04-f1f87e18e91f")
-		(at 165.65 66.5)
+		(at 171.375 63.79)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW17"
@@ -5798,19 +5926,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3846816f-18f8-4161-b872-de330d8be54e")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -5842,7 +5957,7 @@
 			)
 		)
 		(path "/17e5f922-2cb9-4e11-b6dd-1243b8bf1070")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -6062,7 +6177,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "93cf6a10-8a12-4975-8cca-681255eae7ee")
 		)
@@ -6121,6 +6236,7 @@
 			(pintype "passive")
 			(uuid "bea53c09-9e84-4081-9526-09cfd30e54f8")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -6136,7 +6252,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "be9ec6c9-ed61-43ee-88ee-40487abbcc9c")
-		(at 132.05 83.5)
+		(at 132.08 86.36)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW7"
@@ -6157,19 +6273,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0cba016f-c1a9-43ae-bf9b-4a45edd90982")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -6201,7 +6304,7 @@
 			)
 		)
 		(path "/7a9508ed-338c-4ff6-9f7f-64d945c2fe38")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -6421,7 +6524,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "27e06739-9cca-4faa-9b3c-910c10744308")
 		)
@@ -6480,6 +6583,7 @@
 			(pintype "passive")
 			(uuid "02112f2b-c259-4355-96d2-94f32fd457ff")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -6495,7 +6599,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "e1f30cb4-2380-481a-9814-39ffb63b9b78")
-		(at 144.55 92.15)
+		(at 144.685 97.1)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW12"
@@ -6516,19 +6620,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "07fc01d7-428e-4ca1-a99e-05cde7dfab63")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -6560,7 +6651,7 @@
 			)
 		)
 		(path "/abf165df-0595-41a1-8acf-9bd7d488a3ca")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -6780,7 +6871,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "c431de94-564d-4079-a2a5-5c63ed210287")
 		)
@@ -6839,6 +6930,7 @@
 			(pintype "passive")
 			(uuid "3b3cc78f-9284-4dfa-9d06-12c9899bb1b4")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -6854,13 +6946,13 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "f2266047-f607-47ce-8dcb-31a4345564c9")
-		(at 132.05 66.4)
+		(at 132.05 63.79)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW5"
 			(at 3.25 -2 0)
 			(layer "F.SilkS")
-			(uuid "7b8cb788-a075-41b4-b7ea-1a6f8d35d0d7")
+			(uuid "061f7f15-f04f-49d3-a412-18f10340196a")
 			(effects
 				(font
 					(size 1 1)
@@ -6871,23 +6963,10 @@
 		(property "Value" "SW_Push"
 			(at 3.75 6.7 0)
 			(layer "F.Fab")
-			(uuid "015b5f3e-dc1d-42c3-9044-fa096e5b3298")
+			(uuid "07d86a33-8403-469b-a88b-bdf8a4d96206")
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0d094d2d-451e-4cbf-b3d1-19b746d4c7dc")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -6897,7 +6976,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c42e9574-4d14-4873-843f-ae6dc256c9c2")
+			(uuid "d9e4bb1c-339e-485a-9102-df3dd7c9796a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6910,7 +6989,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "86a2b6f7-508b-41b9-8bca-00140bb83f11")
+			(uuid "04f2e9c2-b219-4315-a181-f6b245df0dc3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6919,7 +6998,7 @@
 			)
 		)
 		(path "/824477de-340e-49df-a2da-0cc5293ec232")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7139,7 +7218,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "e495d83d-e898-4119-a893-8cbda82ebc81")
 		)
@@ -7198,6 +7277,7 @@
 			(pintype "passive")
 			(uuid "8402e40b-9d6c-44ec-b27c-0cc3c3277f15")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -7213,7 +7293,7 @@
 	(footprint "Button_Switch_THT:SW_PUSH_6mm"
 		(layer "F.Cu")
 		(uuid "f5bbd88c-b449-473b-906a-1e18f8d3a9fd")
-		(at 165.65 83.6)
+		(at 171.375 86.65)
 		(descr "Generic 6mm SW tactile push button")
 		(tags "tact sw push 6mm")
 		(property "Reference" "SW19"
@@ -7234,19 +7314,6 @@
 			(effects
 				(font
 					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "fc8efbdf-37b8-4cdb-8a97-6b472a989ca3")
-			(effects
-				(font
-					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -7278,7 +7345,7 @@
 			)
 		)
 		(path "/507c732e-22c3-426d-94cb-bb399c820e01")
-		(sheetname "Root")
+		(sheetname "/")
 		(sheetfile "Single Key.kicad_sch")
 		(attr through_hole)
 		(fp_line
@@ -7498,7 +7565,7 @@
 				(width 0.1)
 				(type solid)
 			)
-			(fill none)
+			(fill no)
 			(layer "F.Fab")
 			(uuid "166c5a4e-30b0-4861-9a79-ee977dc03e23")
 		)
@@ -7557,6 +7624,7 @@
 			(pintype "passive")
 			(uuid "16502c89-a227-479e-b72c-77892a4ec42e")
 		)
+		(embedded_fonts no)
 		(model "${KICAD8_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_PUSH_6mm.wrl"
 			(offset
 				(xyz 0 0 0)
@@ -7571,13 +7639,525 @@
 	)
 	(gr_rect
 		(start 89.4 58.9)
-		(end 181.1 105.3)
+		(end 187.9 112.975)
 		(stroke
 			(width 0.2)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.Cu")
+		(net 5)
 		(uuid "1a5de309-d72a-409b-ae5c-95e3275934f6")
 	)
+	(segment
+		(start 171.355 97.1)
+		(end 168.275 100.18)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "040ed0b4-b20b-47f5-867f-0701309b7fec")
+	)
+	(segment
+		(start 168.275 107.95)
+		(end 167.64 108.585)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "36ac6876-e2cf-4a48-b0f0-8312910ec555")
+	)
+	(segment
+		(start 159.385 108.585)
+		(end 167.64 108.585)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "6bb8169e-ab5b-485b-813d-478afd4143da")
+	)
+	(segment
+		(start 168.275 100.18)
+		(end 168.275 107.95)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 1)
+		(uuid "812d0ce5-9cf2-4c00-9455-1a805311b4c2")
+	)
+	(segment
+		(start 118.455 63.79)
+		(end 119.4 63.79)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "23faf8d3-8e1b-4622-b714-df619489c90d")
+	)
+	(segment
+		(start 115.57 66.675)
+		(end 118.455 63.79)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "338bc18a-5f17-4c8d-8a0b-43925231b0d0")
+	)
+	(segment
+		(start 118.04 75)
+		(end 119.4 75)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "3d1cafbd-c393-4f09-b14f-4429a9e34ebf")
+	)
+	(segment
+		(start 132.715 108.585)
+		(end 149.225 108.585)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "42d59f25-9403-417b-86b8-f007ba528acd")
+	)
+	(segment
+		(start 115.57 78.83)
+		(end 115.57 66.675)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "47b469a1-8c34-4463-afe8-b7194c0e2d30")
+	)
+	(segment
+		(start 115.57 89.535)
+		(end 115.57 88.9)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "5083034b-eedd-44f2-bc1c-449dd6554172")
+	)
+	(segment
+		(start 115.57 93.29)
+		(end 115.57 89.535)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "5267e899-d4fe-4f03-a11b-03e15811a882")
+	)
+	(segment
+		(start 128.905 104.775)
+		(end 132.715 108.585)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "57cabbd9-1bef-49a8-870a-f94baa8cd9ea")
+	)
+	(segment
+		(start 119.38 97.1)
+		(end 115.57 93.29)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "5a74d0ca-93c4-4add-a2dc-0183c1b5e198")
+	)
+	(segment
+		(start 117.82 86.65)
+		(end 119.4 86.65)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "5c1b5599-01fd-484f-b916-440d38216fe5")
+	)
+	(segment
+		(start 115.57 89.535)
+		(end 115.57 78.83)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "5ee86fdd-fc7a-487b-a2ce-4a9cfee12db6")
+	)
+	(segment
+		(start 126.31 97.1)
+		(end 128.905 99.695)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "818801a5-68fa-4753-b42b-6270b5c50712")
+	)
+	(segment
+		(start 115.57 88.9)
+		(end 117.82 86.65)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "ac0c5b81-43fe-424c-870b-d421787680f8")
+	)
+	(segment
+		(start 115.57 78.83)
+		(end 115.57 77.47)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "b675af6d-3e65-4dd9-8897-0910fe8893ef")
+	)
+	(segment
+		(start 128.905 99.695)
+		(end 128.905 104.775)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "c7465062-4793-4795-90e9-1d73fc0cdccd")
+	)
+	(segment
+		(start 115.57 77.47)
+		(end 118.04 75)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "da1adf31-a4cf-4b61-a341-cc1433b8e0af")
+	)
+	(segment
+		(start 125.88 97.1)
+		(end 126.31 97.1)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "ee58db26-e58b-45f3-b56e-de5591571cbd")
+	)
+	(segment
+		(start 159.729 98.809)
+		(end 159.729 103.161)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "0a357de6-7cab-457c-b4b0-1cb15c4f4def")
+	)
+	(segment
+		(start 158.02 97.1)
+		(end 159.729 98.809)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "c79c1e82-6d77-4a0c-8fb6-a9e21283a1c6")
+	)
+	(segment
+		(start 159.729 103.161)
+		(end 156.845 106.045)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "e26598c9-8f78-4505-9e8c-e3156bd91a6a")
+	)
+	(segment
+		(start 156.845 106.045)
+		(end 156.845 108.585)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 3)
+		(uuid "ede23f4a-5050-41d7-8971-3e2a02618fed")
+	)
+	(segment
+		(start 151.185 97.1)
+		(end 154.305 100.22)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 4)
+		(uuid "a8c38811-e607-4c27-8420-36c27642b828")
+	)
+	(segment
+		(start 154.305 100.22)
+		(end 154.305 108.585)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 4)
+		(uuid "d98a69aa-db88-407c-aa2f-2a775e383ebf")
+	)
+	(segment
+		(start 144.155787 104.14)
+		(end 150.495 104.14)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "058851bc-7d60-4695-ae16-2c5cf39c42fe")
+	)
+	(segment
+		(start 130.175 97.155)
+		(end 131.975 97.155)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "259b9a97-5b9f-408d-b802-af6419848cc4")
+	)
+	(segment
+		(start 151.765 105.41)
+		(end 151.765 107.315)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "577bc05d-31a2-48ca-ba6a-7327d7df7150")
+	)
+	(segment
+		(start 128.905 87.63)
+		(end 128.905 76.2)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "636256d7-ec20-4857-8470-c086d1ffc690")
+	)
+	(segment
+		(start 138.53 98.514213)
+		(end 144.155787 104.14)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "64c4955b-d3c3-48f2-a249-1f02d4751016")
+	)
+	(segment
+		(start 128.905 65.405)
+		(end 128.905 76.2)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "6b552bc4-b61e-4410-8255-1e1fc51b3692")
+	)
+	(segment
+		(start 150.495 104.14)
+		(end 151.765 105.41)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "7b0f7925-13ea-4bf3-9dec-69d8b655df7f")
+	)
+	(segment
+		(start 130.175 86.36)
+		(end 128.905 87.63)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "7dedf9ed-bfde-48f9-bdac-82a0c3415c48")
+	)
+	(segment
+		(start 138.53 97.1)
+		(end 138.53 98.514213)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "a6ba445a-a3ce-4dee-bbfb-5b4138a4ca1b")
+	)
+	(segment
+		(start 130.52 63.79)
+		(end 128.905 65.405)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "b6784491-c32c-4574-abd5-6cc6647f4098")
+	)
+	(segment
+		(start 128.905 87.63)
+		(end 128.905 95.885)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "b9bfacc8-7bef-42dd-8034-34c74dd4135a")
+	)
+	(segment
+		(start 130.175 74.93)
+		(end 132.03 74.93)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "c40d33c5-2232-45fa-baf8-b78b74e7057a")
+	)
+	(segment
+		(start 132.05 63.79)
+		(end 130.52 63.79)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "d21b3fe5-1a70-4710-84d8-f8a215c6b2f8")
+	)
+	(segment
+		(start 128.905 95.885)
+		(end 130.175 97.155)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "d2709bbc-881e-49c3-a45d-ef38d317c563")
+	)
+	(segment
+		(start 128.905 76.2)
+		(end 130.175 74.93)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "d4714d61-697c-4ba5-a0ef-a502cb968e49")
+	)
+	(segment
+		(start 132.08 86.36)
+		(end 130.175 86.36)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "d82f2d69-dc87-4093-8ff4-c6079643c75c")
+	)
+	(segment
+		(start 131.975 97.155)
+		(end 132.03 97.1)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "e2f87744-1533-473b-8eda-1bd7cf49788c")
+	)
+	(segment
+		(start 132.03 74.93)
+		(end 132.05 74.95)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 5)
+		(uuid "ff12b1ff-177f-4b59-b6a1-2fa3fc536310")
+	)
+	(segment
+		(start 179.705 71.673354)
+		(end 179.705 71.755)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 6)
+		(uuid "2cd8ccae-9261-4c7d-a623-e471f7ba24a1")
+	)
+	(segment
+		(start 179.705 70.12)
+		(end 179.705 71.673354)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 6)
+		(uuid "5b2537d2-3ece-4549-8982-36eb9e03209e")
+	)
+	(segment
+		(start 177.875 68.29)
+		(end 179.705 70.12)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 6)
+		(uuid "88c10045-8c5f-4232-af7f-1e77971be483")
+	)
+	(segment
+		(start 183.525 75.575)
+		(end 185.445 75.575)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 6)
+		(uuid "9e56f27b-1a62-4e09-81b0-af33a13d507f")
+	)
+	(segment
+		(start 179.853658 71.903658)
+		(end 183.525 75.575)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 6)
+		(uuid "a2a9035b-569e-4b74-b739-48a658eeed5f")
+	)
+	(segment
+		(start 179.705 71.755)
+		(end 179.853658 71.903658)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 6)
+		(uuid "ec1bf31e-3d41-4b6a-a1d9-50364ce32d34")
+	)
+	(segment
+		(start 179.48 78.115)
+		(end 177.875 79.72)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 7)
+		(uuid "5c66ce5a-33a6-496c-99e8-6bb5b6129ec0")
+	)
+	(segment
+		(start 185.445 78.115)
+		(end 179.48 78.115)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 7)
+		(uuid "d56089f4-a94a-40d8-93c4-d42df5fb970a")
+	)
+	(segment
+		(start 179.49 89.535)
+		(end 177.875 91.15)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "2526c7bb-710a-476d-9ba3-0bb8f638c7b0")
+	)
+	(segment
+		(start 185.445 80.655)
+		(end 180.34 85.76)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "7fd562a9-07fd-4c08-914d-a068f092b6c7")
+	)
+	(segment
+		(start 180.34 89.535)
+		(end 179.49 89.535)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "b3cb2eec-f32e-4286-b514-0d754a489e0b")
+	)
+	(segment
+		(start 180.34 85.76)
+		(end 180.34 89.535)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 8)
+		(uuid "e1fb100b-c29b-45f1-b552-310aebfeec0b")
+	)
+	(segment
+		(start 185.445 83.195)
+		(end 185.445 94.01)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 9)
+		(uuid "510902a8-d54f-4942-a76c-d8081ef95d6c")
+	)
+	(segment
+		(start 185.445 94.01)
+		(end 177.855 101.6)
+		(width 1.016)
+		(layer "F.Cu")
+		(net 9)
+		(uuid "b62508e4-5a20-4852-b04e-bc1838de9859")
+	)
+	(generated
+		(uuid "20bee80a-44e4-4697-ad80-7d64a92c0380")
+		(type tuning_pattern)
+		(name "Tuning Pattern")
+		(layer "F.Cu")
+		(base_line
+			(pts
+				(xy 179.705 71.673354) (xy 179.705 71.755) (xy 179.853658 71.903658)
+			)
+		)
+		(corner_radius_percent 80)
+		(end
+			(xy 179.853658 71.903658)
+		)
+		(initial_side "right")
+		(last_diff_pair_gap 0.18)
+		(last_netname "Col1")
+		(last_status "tuned")
+		(last_track_width 1.016)
+		(last_tuning "11.5453 mm (tuned)")
+		(max_amplitude 1)
+		(min_amplitude 0.2)
+		(min_spacing 0.6)
+		(origin
+			(xy 179.705 71.673354)
+		)
+		(override_custom_rules no)
+		(rounded yes)
+		(single_sided no)
+		(target_length 1000000)
+		(target_length_max 1000000)
+		(target_length_min 0)
+		(target_skew 0)
+		(target_skew_max 0.1)
+		(target_skew_min -0.1)
+		(tuning_mode "single")
+		(members "2cd8ccae-9261-4c7d-a623-e471f7ba24a1" "ec1bf31e-3d41-4b6a-a1d9-50364ce32d34")
+	)
+	(embedded_fonts no)
 )
