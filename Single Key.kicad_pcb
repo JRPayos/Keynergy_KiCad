@@ -7662,8 +7662,8 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "Matrix Keyboard"
-		(at 111.506 111.506 0)
+	(gr_text "4x5 Matrix Keyboard"
+		(at 111.506 112.014 0)
 		(layer "F.Cu")
 		(uuid "ec937578-237f-4fe4-93fa-e893c9c6d61e")
 		(effects
